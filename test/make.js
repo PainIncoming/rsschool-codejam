@@ -14,7 +14,7 @@ describe('make', () => {
     }
     assert.equal(make(17, 4)(97, 12)()(mul), 79152);
   });
-  it('make()()(fn) => throw error', () => {
+  it('make()()(fn) => No items', () => {
     function fn() {}
     assert.throws(() => make()()(fn), Error, 'No items');
   });
